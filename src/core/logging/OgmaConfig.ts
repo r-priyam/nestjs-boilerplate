@@ -1,5 +1,6 @@
 import * as rfs from 'rotating-file-stream';
 import { Injectable } from '@nestjs/common';
+import { FastifyParser } from '@ogma/platform-fastify';
 import { OgmaModuleOptions } from '@ogma/nestjs-module';
 import { ModuleConfigFactory } from '@golevelup/nestjs-modules';
 
@@ -21,6 +22,9 @@ export class OgmaModuleConfig implements ModuleConfigFactory<OgmaModuleOptions> 
 					path: './logs',
 					teeToStdout: this.config.isDevelopment
 				})
+			},
+			interceptor: {
+				http: FastifyParser
 			}
 		};
 	}
