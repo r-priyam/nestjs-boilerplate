@@ -21,7 +21,7 @@
     "@nestjs/config": "^1.1.5",
     "@nestjs/core": "^8.2.4",
     "@nestjs/platform-fastify": "^8.2.4",
-    "@ogma/nestjs-module": "^3.1.0",
+    "@ogma/nestjs-module": "^3.1.1",
     "@ogma/platform-fastify": "^3.0.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
