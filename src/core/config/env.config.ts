@@ -11,6 +11,10 @@ export class ConfigEnvironment {
 	@IsEnum(Environment)
 	ENV: Environment;
 
+	@IsNotEmpty()
+	@IsString()
+	APP_NAME: string;
+
 	@IsPort()
 	PORT: string;
 

@@ -9,6 +9,10 @@ export class AppConfig {
 		return this.configService.get('ENV') === 'development';
 	}
 
+	get appName(): string {
+		return this.configService.get('APP_NAME');
+	}
+
 	get port(): number {
 		return this.configService.get('PORT');
 	}
