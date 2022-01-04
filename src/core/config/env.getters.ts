@@ -20,4 +20,8 @@ export class AppConfig {
 	get host(): string {
 		return this.configService.get('HOST');
 	}
+
+	get cookieSignSecret(): string {
+		return this.configService.get('COOKIE_SECRET');
+	}
 }

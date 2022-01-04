@@ -1,6 +1,6 @@
 // https://docs.nestjs.com/techniques/configuration#custom-validate-function
 
-import { IsEnum, IsNotEmpty, IsPort, IsString } from 'class-validator';
+import { IsEnum, IsNotEmpty, IsPort, IsString, Length } from 'class-validator';
 
 enum Environment {
 	DEVELOPMENT = 'development',
@@ -21,4 +21,9 @@ export class ConfigEnvironment {
 	@IsNotEmpty()
 	@IsString()
 	HOST: string;
+
+	@IsNotEmpty()
+	@IsString()
+	@Length(64)
+	COOKIE_SECRET: string;
 }

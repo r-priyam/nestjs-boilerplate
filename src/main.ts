@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core';
+import fastifyCookie from 'fastify-cookie';
 import { OgmaService } from '@ogma/nestjs-module';
 import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
 
@@ -12,7 +13,9 @@ async function main() {
 	});
 	const config = app.get(AppConfig);
 	const logger = app.get<OgmaService>(OgmaService);
+
 	app.useLogger(logger);
+	app.register(fastifyCookie, { secret: config.cookieSignSecret });
 
 	await app.listen(config.port, config.host);
 	logger.info(`Application is running on: ${await app.getUrl()}`, { context: 'MAIN' });
