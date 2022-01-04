@@ -24,6 +24,10 @@ export class ConfigEnvironment {
 
 	@IsNotEmpty()
 	@IsString()
+	CORS_ORIGINS: string;
+
+	@IsNotEmpty()
+	@IsString()
 	@Length(64)
 	COOKIE_SECRET: string;
 }

@@ -16,6 +16,7 @@ async function main() {
 
 	app.useLogger(logger);
 	app.register(fastifyCookie, { secret: config.cookieSignSecret });
+	app.enableCors({ origin: config.corsOrigins, credentials: true });
 
 	await app.listen(config.port, config.host);
 	logger.info(`Application is running on: ${await app.getUrl()}`, { context: 'MAIN' });

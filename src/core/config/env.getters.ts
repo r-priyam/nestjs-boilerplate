@@ -21,6 +21,10 @@ export class AppConfig {
 		return this.configService.get('HOST');
 	}
 
+	get corsOrigins(): string[] {
+		return this.configService.get('CORS_ORIGINS').split(', ');
+	}
+
 	get cookieSignSecret(): string {
 		return this.configService.get('COOKIE_SECRET');
 	}
