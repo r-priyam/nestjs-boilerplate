@@ -17,10 +17,10 @@
     "lint:fix": "eslint \"{src,apps,libs}/**/*.ts\" --fix"
   },
   "dependencies": {
-    "@nestjs/common": "^8.2.5",
+    "@nestjs/common": "^8.2.6",
     "@nestjs/config": "^1.1.6",
-    "@nestjs/core": "^8.2.5",
-    "@nestjs/platform-fastify": "^8.2.5",
+    "@nestjs/core": "^8.2.6",
+    "@nestjs/platform-fastify": "^8.2.6",
     "@ogma/nestjs-module": "^3.1.1",
     "@ogma/platform-fastify": "^3.0.1",
     "class-transformer": "^0.5.1",
