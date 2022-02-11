@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^8.2.6",
-    "@nestjs/config": "^1.1.6",
+    "@nestjs/config": "^1.1.7",
     "@nestjs/core": "^8.2.6",
     "@nestjs/platform-fastify": "^8.2.6",
     "@ogma/nestjs-module": "^3.1.1",
