@@ -1,8 +1,9 @@
 // https://docs.nestjs.com/exception-filters#catch-everything
 
-import { ArgumentsHost, Catch, ExceptionFilter, HttpException, HttpStatus } from '@nestjs/common';
-import { OgmaService } from '@ogma/nestjs-module';
-import { HttpAdapterHost } from '@nestjs/core';
+import type { ArgumentsHost, ExceptionFilter } from '@nestjs/common';
+import { Catch, HttpException, HttpStatus } from '@nestjs/common';
+import type { OgmaService } from '@ogma/nestjs-module';
+import type { HttpAdapterHost } from '@nestjs/core';
 
 @Catch()
 export class ExceptionsFilter implements ExceptionFilter {

@@ -1,11 +1,11 @@
 import * as rfs from 'rotating-file-stream';
 import { Injectable } from '@nestjs/common';
 import { FastifyParser } from '@ogma/platform-fastify';
-import { OgmaModuleOptions } from '@ogma/nestjs-module';
-import { ModuleConfigFactory } from '@golevelup/nestjs-modules';
+import type { OgmaModuleOptions } from '@ogma/nestjs-module';
+import type { ModuleConfigFactory } from '@golevelup/nestjs-modules';
 
+import type { AppConfig } from '../config/env.getters';
 import { generateLogFilename } from './LogName';
-import { AppConfig } from '../config/env.getters';
 
 @Injectable()
 export class OgmaModuleConfig implements ModuleConfigFactory<OgmaModuleOptions> {

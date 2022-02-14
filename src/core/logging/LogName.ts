@@ -1,4 +1,4 @@
-import { Generator } from 'rotating-file-stream';
+import type { Generator } from 'rotating-file-stream';
 
 export const generateLogFilename: Generator = (timestamp, index): string => {
     if (!timestamp) return 'app.log';
