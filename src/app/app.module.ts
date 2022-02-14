@@ -7,9 +7,9 @@ import { ConfigModule } from 'src/core/config/config.module';
 import { LoggingModule } from 'src/core/logging/logging.module';
 
 @Module({
-	imports: [ConfigModule, LoggingModule],
-	controllers: [AppController],
-	providers: [AppConfig, AppService],
-	exports: [AppConfig]
+    imports: [ConfigModule, LoggingModule],
+    controllers: [AppController],
+    providers: [AppConfig, AppService],
+    exports: [AppConfig]
 })
 export class AppModule {}

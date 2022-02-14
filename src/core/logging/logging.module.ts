@@ -7,16 +7,16 @@ import { ConfigModule } from 'src/core/config/config.module';
 import { ExceptionsFilter } from './exception.filter';
 
 @Module({
-	imports: [OgmaModule.forRootAsync({ useClass: OgmaModuleConfig, imports: [ConfigModule] })],
-	providers: [
-		{
-			provide: APP_INTERCEPTOR,
-			useClass: OgmaInterceptor
-		},
-		{
-			provide: APP_FILTER,
-			useClass: ExceptionsFilter
-		}
-	]
+    imports: [OgmaModule.forRootAsync({ useClass: OgmaModuleConfig, imports: [ConfigModule] })],
+    providers: [
+        {
+            provide: APP_INTERCEPTOR,
+            useClass: OgmaInterceptor
+        },
+        {
+            provide: APP_FILTER,
+            useClass: ExceptionsFilter
+        }
+    ]
 })
 export class LoggingModule {}

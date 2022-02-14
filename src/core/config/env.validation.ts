@@ -5,10 +5,10 @@ import { validateSync } from 'class-validator';
 import { ConfigEnvironment } from './env.config';
 
 export const validate = (config: Record<string, unknown>): ConfigEnvironment => {
-	const validatedConfig = plainToClass(ConfigEnvironment, config, { enableImplicitConversion: true });
+    const validatedConfig = plainToClass(ConfigEnvironment, config, { enableImplicitConversion: true });
 
-	const errors = validateSync(validatedConfig, { skipMissingProperties: false });
+    const errors = validateSync(validatedConfig, { skipMissingProperties: false });
 
-	if (errors.length > 0) throw new Error(errors.map((error) => error.toString()).join('\n'));
-	return validatedConfig;
+    if (errors.length > 0) throw new Error(errors.map((error) => error.toString()).join('\n'));
+    return validatedConfig;
 };
