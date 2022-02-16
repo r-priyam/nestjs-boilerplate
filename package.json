@@ -18,10 +18,10 @@
     "release": "bumpp package.json package-lock.json --commit --push --tag"
   },
   "dependencies": {
-    "@nestjs/common": "^8.3.0",
+    "@nestjs/common": "^8.3.1",
     "@nestjs/config": "^1.2.0",
-    "@nestjs/core": "^8.3.0",
-    "@nestjs/platform-fastify": "^8.3.0",
+    "@nestjs/core": "^8.3.1",
+    "@nestjs/platform-fastify": "^8.3.1",
     "@ogma/nestjs-module": "^3.1.1",
     "@ogma/platform-fastify": "^3.0.1",
     "class-transformer": "^0.5.1",
