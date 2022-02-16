@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/consistent-type-imports */
 // https://docs.nestjs.com/exception-filters#catch-everything
 
 import type { ArgumentsHost, ExceptionFilter } from '@nestjs/common';
 import { Catch, HttpException, HttpStatus } from '@nestjs/common';
-import type { OgmaService } from '@ogma/nestjs-module';
-import type { HttpAdapterHost } from '@nestjs/core';
+import { OgmaService } from '@ogma/nestjs-module';
+import { HttpAdapterHost } from '@nestjs/core';
 
 @Catch()
 export class ExceptionsFilter implements ExceptionFilter {

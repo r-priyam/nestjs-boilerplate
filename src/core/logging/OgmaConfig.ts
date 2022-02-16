@@ -4,7 +4,8 @@ import { FastifyParser } from '@ogma/platform-fastify';
 import type { OgmaModuleOptions } from '@ogma/nestjs-module';
 import type { ModuleConfigFactory } from '@golevelup/nestjs-modules';
 
-import type { AppConfig } from '../config/env.getters';
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import { AppConfig } from '../config/env.getters';
 import { generateLogFilename } from './LogName';
 
 @Injectable()
