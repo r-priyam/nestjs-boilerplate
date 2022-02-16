@@ -5,8 +5,8 @@ import { AppConfig } from './env.getters';
 import { validate } from './env.validation';
 
 @Module({
-	imports: [NestConfig.forRoot({ validate, cache: true, isGlobal: true })],
-	providers: [ConfigService, AppConfig],
-	exports: [ConfigService, AppConfig]
+    imports: [NestConfig.forRoot({ validate, cache: true, isGlobal: true })],
+    providers: [ConfigService, AppConfig],
+    exports: [ConfigService, AppConfig]
 })
 export class ConfigModule {}
