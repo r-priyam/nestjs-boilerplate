@@ -7,8 +7,6 @@ import { FastifyAdapter } from '@nestjs/platform-fastify';
 import { AppModule } from './app/app.module';
 import { AppConfig } from './core/config/env.getters';
 
-declare const module: any;
-
 async function main() {
     const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter(), {
         bufferLogs: true,
@@ -22,11 +20,6 @@ async function main() {
     app.enableCors({ origin: config.corsOrigins, credentials: true });
 
     await app.listen(config.port, config.host);
-
-    if (module.hot) {
-        module.hot.accept();
-        module.hot.dispose(() => app.close());
-    }
 
     logger.info(`Application is running on: ${await app.getUrl()}`, { context: 'MAIN' });
 }
