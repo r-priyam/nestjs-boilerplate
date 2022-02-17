@@ -18,7 +18,7 @@ async function main() {
     const logger = app.get<OgmaService>(OgmaService);
 
     app.useLogger(logger);
-    app.register(fastifyCookie, { secret: config.cookieSignSecret });
+    await app.register(fastifyCookie, { secret: config.cookieSignSecret });
     app.enableCors({ origin: config.corsOrigins, credentials: true });
 
     await app.listen(config.port, config.host);
@@ -31,4 +31,4 @@ async function main() {
     logger.info(`Application is running on: ${await app.getUrl()}`, { context: 'MAIN' });
 }
 
-main();
+main().then(() => null);
