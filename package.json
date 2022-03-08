@@ -31,7 +31,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rotating-file-stream": "^3.0.3",
-    "rxjs": "^7.5.4"
+    "rxjs": "^7.5.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.18.3",
