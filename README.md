@@ -25,6 +25,9 @@ $ npm run start
 # watch mode
 $ npm run start:dev
 
+# using docker
+$ docker-compose up
+
 # production mode
 $ npm run start:prod
 ```
