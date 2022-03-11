@@ -1,12 +1,20 @@
 version: '3.9'
-services:
 
-  api:
-    container_name: Nest-API
-    env_file:
-      - .env
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "${PORT}:${PORT}"
+services:
+    api:
+        container_name: nest_cute_api
+        restart: always
+        image: node:17.6-alpine
+        volumes:
+            - .:/app:rw
+        working_dir: /app
+        command: npm run start:dev
+        env_file:
+            - .env
+        ports:
+            - '${PORT}:${PORT}'
+        logging:
+            driver: 'json-file'
+            options:
+                max-file: '1'
+                max-size: '5m'

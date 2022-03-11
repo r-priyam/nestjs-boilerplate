@@ -30,20 +30,24 @@ $ npm run start:prod
 ```
 
 ## Running the app using docker image
+
 1. Make `docker-compose.yml` file.
 2. Add the following contents into it -
+
 ```yml
 version: '3.9'
 services:
-  api:
-    image: ghcr.io/r-priyam/nestjs-boilerplate:latest
-    container_name: My-Cute-API
-    env_file:
-      - .env
+    api:
+        image: ghcr.io/r-priyam/nestjs-boilerplate:latest
+        container_name: My-Cute-API
+        env_file:
+            - .env
 ```
+
 3. Make `.env` file in same directory where `docker-compose.yml` file is. Sample env file can be found [here](https://github.com/r-priyam/nestjs-boilerplate/blob/master/.env.example)
 4. All set, run `docker-compose up` from `CLI` and application will start up.
-- Please note, by default docker will assign your current directory name to project name while running `docker-compose up` command. To provide a name for your prject add `COMPOSE_PROJECT_NAME=Your-Project-Name` variable in `.env` file. Read more about `compose enviroments` [here](https://docs.docker.com/compose/reference/envvars/).
+
+-   Please note, by default docker will assign your current directory name to project name while running `docker-compose up` command. To provide a name for your prject add `COMPOSE_PROJECT_NAME=Your-Project-Name` variable in `.env` file. Read more about `compose enviroments` [here](https://docs.docker.com/compose/reference/envvars/).
 
 ## Contributing
 
