@@ -1,21 +1,22 @@
 {
   "name": "nestjs-boilerplate",
   "version": "1.0.6",
-  "description": "Simple template to get started with Nest JS",
-  "author": "Priyam",
   "private": true,
+  "description": "Simple template to get started with Nest JS",
   "license": "MIT",
+  "author": "Priyam",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\"",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
     "lint": "eslint \"**/*.{ts,js}\"",
     "lint:fix": "eslint \"**/*.{ts,js}\" --fix",
-    "release": "bumpp package.json package-lock.json --commit --push --tag"
+    "release": "bumpp --commit --push --tag",
+    "start": "nest start",
+    "start:debug": "nest start --debug --watch",
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/main",
+    "typecheck": "tsc --noemit"
   },
   "dependencies": {
     "@nestjs/common": "^8.4.0",
