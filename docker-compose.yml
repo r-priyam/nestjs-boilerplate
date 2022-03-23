@@ -4,7 +4,7 @@ services:
     api:
         container_name: nest_cute_api
         restart: always
-        image: node:17.7-alpine
+        image: node:17.8-alpine
         volumes:
             - .:/app:rw
         working_dir: /app
