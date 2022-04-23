@@ -1,16 +1,3 @@
 {
-  "extends": [
-    "config:base",
-    ":disablePeerDependencies",
-    ":disableDependencyDashboard",
-    "group:allNonMajor"
-  ],
-  "rangeStrategy": "bump",
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true,
-      "automergeStrategy": "squash"
-    }
-  ]
+	"extends": ["github>r-priyam/configs"]
 }
