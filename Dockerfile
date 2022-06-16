@@ -1,4 +1,4 @@
-FROM node:17 AS base
+FROM node:18 AS base
 
 WORKDIR /app
 
@@ -19,7 +19,7 @@ RUN npm prune --production
 RUN curl -sf https://gobinaries.com/tj/node-prune | sh
 RUN node-prune
 
-FROM node:17-alpine
+FROM node:18-alpine
 
 COPY --from=base /app/package*.json ./
 COPY --from=dev /app/dist ./dist/
